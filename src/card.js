@@ -45,7 +45,6 @@ function createRound(deck) {
 // Taking a turn
 function takeTurn(round, guess) {
    
-
     let feedback = evaluateGuess(guess, round.currentCard.correctAnswer);
     
     if (feedback === 'incorrect!') {
