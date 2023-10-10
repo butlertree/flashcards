@@ -47,7 +47,7 @@ describe('createDeck', function() {
   it('should return the same array passed into it', function() {
     const cards = [{id: 1}, {id: 2}];
     const result = createDeck(cards);
-    expect(result).to.equal(cards);  // Checking if they reference the same array
+    expect(result).to.equal(cards);  
   });
 });
 
@@ -66,7 +66,6 @@ describe('createRound', function() {
     expect(round.currentCard).to.equal(cards[0]);
   });
   
-  // You can add more 'it' blocks here to test other aspects of the createRound function
 });
 
 describe('takeTurn', function() {
@@ -78,5 +77,4 @@ describe('takeTurn', function() {
     expect(round.turns).to.equal(initialTurns + 1);
   });
   
-  // Similarly, you can add more 'it' blocks here to test other aspects of the takeTurn function
 });
