@@ -1,13 +1,3 @@
-// const { prototypeData } = require('./data');
-
-
-// const cards = prototypeData.map((data) => {
-//     return createCard(data.id, data.question, data.answers, data.correctAnswer);
-// });
-
-// console.log(cards);
-
-
 
 function createCard(id, question, answers, correctAnswer){
    let card = {
@@ -18,7 +8,6 @@ function createCard(id, question, answers, correctAnswer){
     }
     return card
 }
-
 
 function evaluateGuess(guess, correctAnswer){
     if(guess === correctAnswer){
@@ -53,7 +42,6 @@ function createRound(deck) {
     return round;
 }
 
-
 // Taking a turn
 function takeTurn(round, guess) {
    
@@ -72,7 +60,6 @@ function takeTurn(round, guess) {
     }
     return feedback  
 }
-
 
 function endRound(round) {
     let score = ((round.deck.length - round.incorrectGuesses.length) / round.deck.length) * 100;
