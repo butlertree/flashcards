@@ -46,6 +46,7 @@ Once you are working through Iteration 3, you will want to run the `node index.j
 
 When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
 
+
 [(https://www.loom.com/share/137d775675d84d9fb23cfc32677b105b)]
 
 ---
