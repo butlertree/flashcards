@@ -22,11 +22,11 @@ const getRound = (round) => {
   return Promise.resolve(round);
 }
 
-const confirmUpdate = (id, round) => {
-  const feedback = processTurn(round, id);
+const confirmUpdate = (userGuess, currentRound) => {
+  const feedback = processTurn(currentRound, userGuess);
   return {
     name: 'feedback',
-    message: `Your answer of ${id} is ${feedback}`
+    message: `Your answer of ${userGuess} is ${feedback}`
   }
 }
 

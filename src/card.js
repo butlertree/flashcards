@@ -24,7 +24,6 @@ function countCards(deck){
     return deck.length;
 }
 
-
 // Creating a round
 function createRound(deck) {
     let round = {
