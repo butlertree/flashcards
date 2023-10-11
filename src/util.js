@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const { takeTurn, endRound } = require('./card');
+const { endRound, processTurn } = require('./card');
 
 const genList = (round) => {
   let card = round.currentCard;
@@ -23,7 +23,7 @@ const getRound = (round) => {
 }
 
 const confirmUpdate = (id, round) => {
-  const feedback = takeTurn(round, id);
+  const feedback = processTurn(round, id);
   return {
     name: 'feedback',
     message: `Your answer of ${id} is ${feedback}`

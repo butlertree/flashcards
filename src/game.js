@@ -1,7 +1,7 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
 const util = require('./util');
-const gameFunctions = require('./card')
+const gameFunctions = require('./card') //access to functions from the .card file
 
 
 
@@ -32,6 +32,8 @@ function printMessage(deck) {
 function printQuestion(round) {
   util.main(round);
 }
+
+//esporting functions
 
 module.exports = { printMessage, printQuestion, start };
 

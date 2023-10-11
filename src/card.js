@@ -35,7 +35,7 @@ function createRound(deck) {
         
         takeTurn: function(guess) {
             console.log(guess)
-            return takeTurn(this, guess);
+            return processTurn(round, guess);
            
         }
     };
@@ -43,7 +43,7 @@ function createRound(deck) {
 }
 
 // Taking a turn
-function takeTurn(round, guess) {
+function processTurn(round, guess) {
    
     let feedback = evaluateGuess(guess, round.currentCard.correctAnswer);
     
@@ -51,7 +51,7 @@ function takeTurn(round, guess) {
         round.incorrectGuesses.push(round.currentCard.id);
     }
 
-    if (round.turns < round.deck.length - 1) {1
+    if (round.turns < round.deck.length - 1) {
         round.turns++;
         round.currentCard = round.deck[round.turns];
     } else {
@@ -69,7 +69,7 @@ function endRound(round) {
     }
 }
 
-
+//exporting 
 
 module.exports = {
     createCard,
@@ -77,7 +77,7 @@ module.exports = {
     createDeck,
     countCards,
     createRound,
-    takeTurn,
+    processTurn,
     endRound
 
 }
