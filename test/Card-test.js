@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const { createCard, evaluateGuess, createDeck, countCards, createRound, takeTurn } = require('../src/card');
+const { createCard, evaluateGuess, createDeck, countCards, createRound, processTurn } = require('../src/card');
 
 describe('card', function() {
   it('should be a function', function() {
@@ -68,13 +68,19 @@ describe('createRound', function() {
   
 });
 
-describe('takeTurn', function() {
+describe('processTurn', function() {
   it('should increase the turn count by one', function() {
     const cards = [{id: 1, correctAnswer: 'Chris rules'}, {id: 2, correctAnswer: 'Wally rules'}];
     const round = createRound(cards);
     const initialTurns = round.turns;
-    takeTurn(round, 'Chris rules');
+    processTurn(round, 'Chris rules');
     expect(round.turns).to.equal(initialTurns + 1);
   });
   
 });
+
+describe('endRound', function(){
+  it('should log to the terminal the percentage of correct when all cards have been played', function (){
+    
+  })
+})
